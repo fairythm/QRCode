@@ -41,12 +41,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/inputURL"
         android:layout_above="@id/showResult"
-        android:layout_gravity="center"/>
+        android:layout_centerInParent="true"/>
 
 
     <EditText
         android:id="@+id/showResult"
-        android:hint="Scan Result:"
+        android:hint="   Scan Result:"
         android:layout_alignParentBottom="true"
         android:textColor="@android:color/black"
         android:background="@null"
