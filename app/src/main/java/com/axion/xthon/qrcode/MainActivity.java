@@ -3,8 +3,13 @@ package com.axion.xthon.qrcode;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.pm.ResolveInfo;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AlertDialog;
 import android.support.v4.app.ActivityCompat;
@@ -107,25 +112,6 @@ public class MainActivity extends AppCompatActivity {
                 //长按保存功能设置完毕
             }
         });
-
-        /*recognizeQRCode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectPic();
-            }
-        });*/
-
-        /*scanQRCodeByCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //申请相机权限
-                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA},1000);
-                ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.VIBRATE},1000);
-                Intent intent=new Intent(MainActivity.this,CaptureActivity.class);
-                startActivityForResult(intent,Codescanned);
-            }
-        });*/
-
 
     }
 
@@ -289,8 +275,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
     /**
      * 使用正则表达式判断字符串是否为URL
      * @param urls 用户头像key
@@ -344,8 +328,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
-
-
 }
 
 
